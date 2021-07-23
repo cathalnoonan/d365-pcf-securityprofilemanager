@@ -2,18 +2,18 @@
 <ImportExportXml version="9.1.0.643" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <!-- Unique Name of Cds Solution-->
-    <UniqueName>solution</UniqueName>
+    <UniqueName>SecurityProfileManager</UniqueName>
     <LocalizedNames>
       <!-- Localized Solution Name in language code -->
-      <LocalizedName description="solution" languagecode="1033" />
+      <LocalizedName description="Security Profile Manager" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0</Version>
+    <Version>1.0.0</Version>
     <!-- Solution Package Type: Unmanaged(0)/Managed(1)/Both(2)-->
     <Managed>2</Managed>
     <Publisher>
       <!-- Unique Publisher Name of Cds Solution -->
-      <UniqueName>Cathal</UniqueName>
+      <UniqueName>cathal</UniqueName>
       <LocalizedNames>
         <!-- Localized Cds Publisher Name in language code-->
         <LocalizedName description="Cathal" languagecode="1033" />
@@ -27,7 +27,7 @@
       <!-- Customization Prefix for the Cds Publisher-->
       <CustomizationPrefix>cn</CustomizationPrefix>
       <!-- Derived Option Value Prefix for the Customization Prefix of Cds Publisher -->
-      <CustomizationOptionValuePrefix>58291</CustomizationOptionValuePrefix>
+      <CustomizationOptionValuePrefix>28852</CustomizationOptionValuePrefix>
       <Addresses>
         <!-- Address of the Publisher-->
         <Address>
