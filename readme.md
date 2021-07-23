@@ -2,6 +2,8 @@
 
 A PCF control to add or remove field security profiles for a user or team.
 
+![Demo](./img/securityprofilemanager.gif)
+
 ---
 
 ## Configuration
