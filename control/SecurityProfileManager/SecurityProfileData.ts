@@ -4,8 +4,6 @@ const API_VERSION = 'v9.1'
 
 export class SecurityProfileData {
 
-    private currentEntitySetName: string | null = null
-
     constructor(
         private clientUrl: string,
         private entityTypeName: string,
@@ -92,6 +90,7 @@ export class SecurityProfileData {
 
         if (this.entityTypeName === 'systemuser') return 'systemuserprofiles_association'
         if (this.entityTypeName === 'team') return 'teamprofiles_association'
+        
         throw Error('Unexpected entity type')
     }
 
@@ -99,10 +98,9 @@ export class SecurityProfileData {
         // May as well hard code this. 
         // There are only two supported entities for the fieldsecurityprofile associations.
 
-        if (this.currentEntitySetName !== null) return this.currentEntitySetName
+        if (this.entityTypeName === 'systemuser') return 'systemusers'
+        if (this.entityTypeName === 'team') return 'teams'
 
-        if (this.entityTypeName === 'systemuser') return this.currentEntitySetName = 'systemusers'
-        if (this.entityTypeName === 'team') return this.currentEntitySetName = 'teams'
         throw Error('Unexpected entity type')
     }
 }

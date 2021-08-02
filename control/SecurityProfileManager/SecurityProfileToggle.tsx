@@ -1,8 +1,8 @@
+import * as React from 'react'
 import { Checkbox } from '@fluentui/react/lib/components/Checkbox/Checkbox'
 import { ICheckboxProps } from '@fluentui/react/lib/components/Checkbox/Checkbox.types'
 import { Stack } from '@fluentui/react/lib/components/Stack/Stack'
 import { IStackProps } from '@fluentui/react/lib/components/Stack/Stack.types'
-import * as React from 'react'
 import { SecurityProfileData, SecurityProfileMap } from './SecurityProfileData'
 
 export interface SecurityProfileToggleProps {
@@ -22,6 +22,7 @@ export const SecurityProfileToggle = (props: SecurityProfileToggleProps): JSX.El
 
     const checkboxProps: ICheckboxProps = {
         checked,
+        disabled: loading,
         label: securityProfile.name,
         onChange: async (ev?: React.FormEvent, changedToChecked?: boolean) => {
             if (typeof checked === 'undefined') return
@@ -44,7 +45,7 @@ export const SecurityProfileToggle = (props: SecurityProfileToggleProps): JSX.El
 
     return (
         <Stack {...stackProps}>
-            <Checkbox {...checkboxProps} disabled={loading} />
+            <Checkbox {...checkboxProps} />
         </Stack>
     )
 }

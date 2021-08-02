@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom'
 import { SecurityProfileManager as App } from './SecurityProfileManager'
 import { SecurityProfileData } from './SecurityProfileData'
 import { ResourceStrings } from './strings/ResourceStrings'
+
 export class SecurityProfileManager implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
 	private container: HTMLDivElement
