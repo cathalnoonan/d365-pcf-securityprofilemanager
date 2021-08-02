@@ -12,3 +12,6 @@
 # msbuild output directories
 /bin
 /obj
+
+# PCF creates a local folder on mac called '~' instead of using the home directory
+/~

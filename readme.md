@@ -45,14 +45,19 @@ When adding the control to the form, open the form in the classic interface
 
 ## Building the control from source
 
-The `.bat` scripts at the root of the project are used to build the project
-- `build.bat` script will build the solution
-- `clean.bat` script will remove the node_modules, or other build related files
-- `rebuild.bat` script will run `clean.bat`, then `build.bat`
-
-The scripts assume the following software is installed:
+The build scripts assume the following software is installed:
 | Name | Link |
 |:---|:---|
 | dotnet | [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download) |
 | node | [https://nodejs.org/en/](https://nodejs.org/en/) |
 | yarn | [https://yarnpkg.com/getting-started/install](https://yarnpkg.com/getting-started/install) |
+
+### On Windows
+The `win-*.bat` scripts at the root of the project are used to build the project
+- `win-build.bat` script will build the solution
+- `win-clean.bat` script will remove the node_modules, or other build related files
+
+### On Mac
+The `mac-*.zsh` scripts at the root of the project are used to build the project
+- `mac-build.zsh` script will build the solution
+- `mac-clean.zsh` script will remove the node_modules, or other build related files
