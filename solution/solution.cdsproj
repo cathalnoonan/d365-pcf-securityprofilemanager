@@ -8,18 +8,19 @@
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.props')" />
 
   <PropertyGroup>
+    <Name>SecurityProfileManager</Name>
     <ProjectGuid>297866b7-b9ed-4fdd-a27a-bae96a9224f5</ProjectGuid>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <!--Remove TargetFramework when this is available in 16.1-->
     <TargetFramework>net462</TargetFramework>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-    <SolutionRootPath>src</SolutionRootPath>
   </PropertyGroup>
-
+  
   <!-- Solution Packager overrides -->
   <PropertyGroup>
-    <SolutionPackageType>Both</SolutionPackageType>
-    <SolutionPackageZipFilePath>bin\$(Configuration)\SecurityProfileManager.zip</SolutionPackageZipFilePath>
+    <SolutionRootPath>src</SolutionRootPath>
+    <SolutionPackageType>Managed</SolutionPackageType>
+    <SolutionPackageZipFilePath>..\dist\$(Name).zip</SolutionPackageZipFilePath>
   </PropertyGroup>
   
   <ItemGroup>
