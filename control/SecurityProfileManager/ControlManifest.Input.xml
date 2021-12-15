@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
   <control namespace="Cathal" constructor="SecurityProfileManager" display-name-key="SecurityProfileManager" description-key="SecurityProfileManager_description" control-type="standard" 
-           version="1.0.0">
+           version="1.0.1">
     
     <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
     If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be false by default.
@@ -67,7 +67,7 @@
 
     <resources>
       <code path="index.ts" order="1" />
-      <resx path="strings/SecurityProfileManager.1033.resx" version="1.0.0" />
+      <resx path="strings/SecurityProfileManager.1033.resx" version="1.0.1" />
     </resources>
 
     <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
