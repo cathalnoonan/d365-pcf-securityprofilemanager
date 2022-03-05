@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@fluentui/react": "^8.23.8",
-    "axios": "^0.24.0",
     "react": "16",
     "react-dom": "16"
   },

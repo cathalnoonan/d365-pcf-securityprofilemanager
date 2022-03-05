@@ -1,14 +1,17 @@
-import axios from 'axios'
+import { XrmHttpService } from './XrmHttpService'
 
 const API_VERSION = 'v9.1'
 
 export class SecurityProfileData {
+
+    private readonly xrmHttpService: XrmHttpService
 
     constructor(
         private clientUrl: string,
         private entityTypeName: string,
         private entityId: string
     ) { 
+        this.xrmHttpService = new XrmHttpService(`${clientUrl}/api/data/${API_VERSION}`)
     }
 
     public getSecurityProfileMap = async (): Promise<SecurityProfileMap[]> => {
@@ -39,7 +42,7 @@ export class SecurityProfileData {
             '@odata.id': `${this.clientUrl}/api/data/${API_VERSION}/fieldsecurityprofiles(${id})`
         }
 
-        return await axios.post(url, data)        
+        return await this.xrmHttpService.POST(url, data)        
     }
 
     public disassociateSecurityProfile = async (id: string): Promise<void> => {
@@ -49,7 +52,7 @@ export class SecurityProfileData {
         const associationName = this.getAssociationName()
         const url = `${this.clientUrl}/api/data/${API_VERSION}/${entitySetName}(${this.entityId})/${associationName}(${id})/$ref`
 
-        return await axios.delete(url)
+        return await this.xrmHttpService.DELETE(url)
     }
 
     private getAllSecurityProfiles = async (): Promise<SecurityProfile[]> => {
@@ -57,9 +60,9 @@ export class SecurityProfileData {
 
         const url = `${this.clientUrl}/api/data/${API_VERSION}/fieldsecurityprofiles?$select=name,fieldsecurityprofileid&$orderby=name asc`
 
-        const result = await axios.get(url)
+        const result = await this.xrmHttpService.GET<{ value: any[] }>(url)
 
-        const securityProfiles = result.data.value.map((entity: any) => ({
+        const securityProfiles = result.value.map((entity: any) => ({
             id: entity.fieldsecurityprofileid,
             name: entity.name,
         }))
@@ -74,9 +77,9 @@ export class SecurityProfileData {
         const associationName = this.getAssociationName()
         const url = `${this.clientUrl}/api/data/${API_VERSION}/${currentEntitySetName}(${this.entityId})/${associationName}`
 
-        const result = await axios.get(url)
+        const result = await this.xrmHttpService.GET<{ value: any[] }>(url)
 
-        const securityProfiles = result.data.value.map((entity: any) => ({
+        const securityProfiles = result.value.map((entity: any) => ({
             id: entity.fieldsecurityprofileid,
             name: entity.name,
         }))
