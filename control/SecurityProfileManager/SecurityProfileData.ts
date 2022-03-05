@@ -7,9 +7,9 @@ export class SecurityProfileData {
     private readonly xrmHttpService: XrmHttpService
 
     constructor(
-        private clientUrl: string,
-        private entityTypeName: string,
-        private entityId: string
+        private readonly clientUrl: string,
+        private readonly entityTypeName: string,
+        private readonly entityId: string
     ) { 
         this.xrmHttpService = new XrmHttpService(`${clientUrl}/api/data/${API_VERSION}`)
     }
@@ -42,6 +42,8 @@ export class SecurityProfileData {
             '@odata.id': `${this.clientUrl}/api/data/${API_VERSION}/fieldsecurityprofiles(${id})`
         }
 
+        console.log('SecurityProfileManager associateSecurityProfile', { method:'POST', url, data })
+
         return await this.xrmHttpService.POST(url, data)        
     }
 
@@ -52,6 +54,8 @@ export class SecurityProfileData {
         const associationName = this.getAssociationName()
         const url = `${this.clientUrl}/api/data/${API_VERSION}/${entitySetName}(${this.entityId})/${associationName}(${id})/$ref`
 
+        console.log('SecurityProfileManager disassociateSecurityProfile', { method:'DELETE', url })
+
         return await this.xrmHttpService.DELETE(url)
     }
 
@@ -59,6 +63,8 @@ export class SecurityProfileData {
         // GET /api/data/v9.1/fieldsecurityprofiles?$select=fieldsecurityprofileid,name&$orderby=name%20asc
 
         const url = `${this.clientUrl}/api/data/${API_VERSION}/fieldsecurityprofiles?$select=name,fieldsecurityprofileid&$orderby=name asc`
+
+        console.log('SecurityProfileManager getAllSecurityProfiles', { method:'GET', url })
 
         const result = await this.xrmHttpService.GET<{ value: any[] }>(url)
 
@@ -76,6 +82,8 @@ export class SecurityProfileData {
         const currentEntitySetName = await this.getCurrentEntitySetName()
         const associationName = this.getAssociationName()
         const url = `${this.clientUrl}/api/data/${API_VERSION}/${currentEntitySetName}(${this.entityId})/${associationName}`
+
+        console.log('SecurityProfileManager getAssignedSecurityProfiles', { method:'GET', url })
 
         const result = await this.xrmHttpService.GET<{ value: any[] }>(url)
 

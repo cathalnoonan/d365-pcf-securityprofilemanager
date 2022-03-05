@@ -25,6 +25,8 @@ export class SecurityProfileManager implements ComponentFramework.StandardContro
 		const data = new SecurityProfileData(clientUrl, entityTypeName!, entityId!)
 		const resourceStrings = new ResourceStrings(context)
 
+		console.log('SecurityProfileManager updateView', { clientUrl })
+
 		ReactDOM.render(
 			React.createElement(App, { entityId, data, resourceStrings }),
 			this.container
