@@ -32,12 +32,11 @@ jobs:
         run: ./build.sh
 
       # Prepare artifact(s)
-      - name: Get solution name
-        id: get-solution-name
-        run: echo "::set-output name=SOLUTION_NAME::$(basename $(find ./dist -type f -iname "*") .zip)"
+      # Include license file in the zip to avoid zip inside zip causing confusion
+      - run: cp ./LICENSE ./dist
       - name: 'Upload artifact'
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ steps.get-solution-name.outputs.SOLUTION_NAME }}
-          path: ./dist/${{ steps.get-solution-name.outputs.SOLUTION_NAME }}.zip
+          name: artifacts
+          path: ./dist/*
           retention-days: 30
