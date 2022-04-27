@@ -1,9 +1,12 @@
-const webpack = require('webpack')
+// @ts-check
 
-/** @type {webpack.Configuration} */
-const config = {
-    devtool: 'source-map',
-    target: ['web', 'es5'], // Keep it working in IE
+/**
+ * @type { import('webpack').Configuration }
+ */
+ module.exports = {
+  // Generate a source map to make debugging easier.
+  devtool: 'source-map',
+
+  // Support older browsers.
+  target: ['web', 'es5'],
 }
-
-module.exports = config

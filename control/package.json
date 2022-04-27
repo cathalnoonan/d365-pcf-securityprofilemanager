@@ -1,6 +1,6 @@
 {
   "name": "d365-pcf-securityprofilemanager",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Project containing your PowerApps Component Framework (PCF) control.",
   "homepage": "https://github.com/cathalnoonan/d365-pcf-securityprofilemanager#readme",
   "license": "MIT",
@@ -16,13 +16,13 @@
     "react-dom": "16"
   },
   "devDependencies": {
-    "@types/node": "^10.12.18",
+    "@types/node": "^16.11.31",
     "@types/powerapps-component-framework": "^1.3.4",
     "@types/react": "16",
-    "@types/react-dom": "16",
-    "@types/xrm": "^9.0.57",
-    "pcf-scripts": "^1.12.2",
-    "pcf-start": "^1.12.2",
-    "typescript": "^4.6.2"
+    "@types/react-dom": "^16.9.15",
+    "@types/xrm": "^9.0.59",
+    "pcf-scripts": "^1.14.4",
+    "pcf-start": "^1.14.4",
+    "typescript": "^4.6.3"
   }
 }
