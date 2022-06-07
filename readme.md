@@ -1,5 +1,7 @@
 # Field / Column Security Profile Manager
 
+[![Build](https://github.com/cathalnoonan/d365-pcf-securityprofilemanager/actions/workflows/BUILD.yml/badge.svg)](https://github.com/cathalnoonan/d365-pcf-securityprofilemanager/actions/workflows/BUILD.yml)
+
 A PCF control to add or remove field security profiles for a user or team.
 
 ![Demo](./img/securityprofilemanager.gif)
