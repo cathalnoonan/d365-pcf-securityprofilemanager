@@ -1,9 +1,8 @@
 import * as React from 'react'
-import { Checkbox } from '@fluentui/react/lib/components/Checkbox/Checkbox'
-import { ICheckboxProps } from '@fluentui/react/lib/components/Checkbox/Checkbox.types'
-import { Stack } from '@fluentui/react/lib/components/Stack/Stack'
-import { IStackProps } from '@fluentui/react/lib/components/Stack/Stack.types'
 import { SecurityProfileData, SecurityProfileMap } from './SecurityProfileData'
+
+import { Checkbox, ICheckboxProps } from '@fluentui/react/lib/Checkbox'
+import { Stack, IStackProps } from '@fluentui/react/lib/Stack'
 
 export interface SecurityProfileToggleProps {
     securityProfile: SecurityProfileMap

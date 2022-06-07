@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { ScrollablePane } from '@fluentui/react/lib/components/ScrollablePane/ScrollablePane'
-import { Spinner } from '@fluentui/react/lib/components/Spinner/Spinner'
-import { SpinnerSize } from '@fluentui/react/lib/components/Spinner/Spinner.types'
-import { Stack } from '@fluentui/react/lib/components/Stack/Stack'
-import { SecurityProfileData, SecurityProfileMap } from './SecurityProfileData'
 import { SecurityProfileToggle } from './SecurityProfileToggle'
 import { ResourceStrings } from './strings/ResourceStrings'
+
+import { ScrollablePane } from '@fluentui/react/lib/ScrollablePane'
+import { Spinner, SpinnerSize } from '@fluentui/react/lib/Spinner'
+import { Stack } from '@fluentui/react/lib/Stack'
+import { SecurityProfileData, SecurityProfileMap } from './SecurityProfileData'
 
 export interface SecurityProfileManagerProps {
     entityId: string | null
