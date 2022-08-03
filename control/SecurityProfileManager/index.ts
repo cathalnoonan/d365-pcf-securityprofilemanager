@@ -21,8 +21,9 @@ export class SecurityProfileManager implements ComponentFramework.StandardContro
 	public updateView(context: ComponentFramework.Context<IInputs>): void {
 
 		const clientUrl = Xrm.Utility.getGlobalContext().getClientUrl()
-		const { entityTypeName, entityId } = context.mode.contextInfo
-		const data = new SecurityProfileData(clientUrl, entityTypeName!, entityId!)
+		const entityLogicalName = context.parameters.entityLogicalName.raw!
+		const entityId = context.parameters.entityId.raw!
+		const data = new SecurityProfileData(clientUrl, entityLogicalName!, entityId!)
 		const resourceStrings = new ResourceStrings(context)
 
 		console.log('SecurityProfileManager updateView', { clientUrl })

@@ -1,6 +1,6 @@
 {
   "name": "d365-pcf-securityprofilemanager",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Project containing your PowerApps Component Framework (PCF) control.",
   "homepage": "https://github.com/cathalnoonan/d365-pcf-securityprofilemanager#readme",
   "license": "MIT",
