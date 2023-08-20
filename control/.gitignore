@@ -13,5 +13,13 @@
 /bin
 /obj
 
-# PCF creates a local folder on mac called '~' instead of using the home directory
-/~
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# PCF on mac creates this folder
+**/~/
+.DS_Store
+
+# JetBrains Rider
+.idea/
+*.sln.iml
