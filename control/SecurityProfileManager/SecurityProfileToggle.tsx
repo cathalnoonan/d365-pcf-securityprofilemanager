@@ -28,7 +28,7 @@ export const SecurityProfileToggle = (props: SecurityProfileToggleProps): JSX.El
 
             try {
                 setLoading(true)
-    
+
                 if (changedToChecked) {
                     await data.associateSecurityProfile(securityProfile.id)
                     setChecked(changedToChecked)

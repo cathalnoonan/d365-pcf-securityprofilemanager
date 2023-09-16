@@ -35,16 +35,16 @@ export const SecurityProfileManager = (props: SecurityProfileManagerProps): JSX.
         }
         getDataMap()
     }, [entityId])
-    
+
     function renderComponent(): JSX.Element {
         if (loading) return (
             <Spinner size={SpinnerSize.large} label={resourceStrings.Loading} />
         )
-    
+
         if (error) return (
             <div>{resourceStrings.SaveTheRecord}</div>
         )
-    
+
         return (
             <div style={{ height: '200px', position: 'relative' }}>
                 <ScrollablePane>
@@ -65,4 +65,4 @@ export const SecurityProfileManager = (props: SecurityProfileManagerProps): JSX.
             </div>
         </div>
     )
-} 
+}

@@ -10,7 +10,7 @@ export class SecurityProfileData {
         private readonly clientUrl: string,
         private readonly entityTypeName: string,
         private readonly entityId: string
-    ) { 
+    ) {
         this.xrmHttpService = new XrmHttpService(`${clientUrl}/api/data/${API_VERSION}`)
     }
 
@@ -30,10 +30,10 @@ export class SecurityProfileData {
 
     public associateSecurityProfile = async (id: string): Promise<void> => {
         // POST /api/data/v9.0/systemusers(00000000-0000-0000-0000-000000000002)/systemuserprofiles_association/$ref
-        // 
-        // {  
-        //    "@odata.id":"[Organization URI]/api/data/v9.0/fieldsecurityprofiles(00000000-0000-0000-0000-000000000001)"  
-        // }  
+        //
+        // {
+        //    "@odata.id":"[Organization URI]/api/data/v9.0/fieldsecurityprofiles(00000000-0000-0000-0000-000000000001)"
+        // }
 
         const entitySetName = this.getCurrentEntitySetName()
         const associationName = this.getAssociationName()
@@ -44,7 +44,7 @@ export class SecurityProfileData {
 
         console.log('SecurityProfileManager associateSecurityProfile', { method:'POST', url, data })
 
-        return await this.xrmHttpService.POST(url, data)        
+        return await this.xrmHttpService.POST(url, data)
     }
 
     public disassociateSecurityProfile = async (id: string): Promise<void> => {
@@ -75,7 +75,7 @@ export class SecurityProfileData {
 
         return securityProfiles
     }
-    
+
     private getAssignedSecurityProfiles = async (): Promise<SecurityProfile[]> => {
         // GET /api/data/v9.1/systemusers(00000000-0000-0000-0000-000000000000)/systemuserprofiles_association
 
@@ -96,17 +96,17 @@ export class SecurityProfileData {
     }
 
     private getAssociationName = (): string => {
-        // May as well hard code this. 
+        // May as well hard code this.
         // There are only two supported entities for the fieldsecurityprofile associations.
 
         if (this.entityTypeName === 'systemuser') return 'systemuserprofiles_association'
         if (this.entityTypeName === 'team') return 'teamprofiles_association'
-        
+
         throw Error('Unexpected entity type')
     }
 
     private getCurrentEntitySetName = (): string => {
-        // May as well hard code this. 
+        // May as well hard code this.
         // There are only two supported entities for the fieldsecurityprofile associations.
 
         if (this.entityTypeName === 'systemuser') return 'systemusers'

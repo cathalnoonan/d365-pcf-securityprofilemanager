@@ -21,7 +21,7 @@
     - SingleLine.Ticker
     - SingleLine.URL
     - TwoOptions
-    - Whole.None  
+    - Whole.None
   - Refer to Microsoft's PCF [documentation page](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/manifest-schema-reference/property#remarks) for more information about the above field types.
   - The value of this field is not read or changed by the control, it is just used as a placeholder to give the control somewhere to render.
 - Open the properties of the field.

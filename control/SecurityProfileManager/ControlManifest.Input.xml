@@ -21,8 +21,8 @@
     <property name="placeholderField" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="any" usage="bound" required="true" />
     <property name="entityId" display-name-key="entityId_Display_Key" description-key="entityId_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
     <property name="entityLogicalName" display-name-key="entityLogicalName_Display_Key" description-key="entityLogicalName_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
-    <!-- 
-      Property node's of-type attribute can be of-type-group attribute. 
+    <!--
+      Property node's of-type attribute can be of-type-group attribute.
       Example:
       <type-group name="numbers">
         <type>Whole.None</type>
