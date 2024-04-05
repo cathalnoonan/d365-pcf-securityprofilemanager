@@ -5,7 +5,7 @@
     <UniqueName>SecurityProfileManager</UniqueName>
     <LocalizedNames>
       <!-- Localized Solution Name in language code -->
-      <LocalizedName description="Security Profile Manager" languagecode="1033" />
+      <LocalizedName description="Security Profile Manager. https://github.com/cathalnoonan/d365-pcf-securityprofilemanager" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
     <Version>2.0.1</Version>
