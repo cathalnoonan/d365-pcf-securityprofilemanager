@@ -16,5 +16,5 @@ The build scripts assume the following software is installed:
 
 | Name | Version | Link |
 |:---|:---|:---|
-| dotnet | dotnet6.0 | [https://dotnet.microsoft.com/en-us/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) |
+| dotnet | dotnet8.0 | [https://dotnet.microsoft.com/en-us/download/dotnet/8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) |
 | node | Latest LTS | [https://nodejs.org/en/](https://nodejs.org/en/) |
