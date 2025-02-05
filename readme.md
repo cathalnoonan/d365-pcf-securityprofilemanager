@@ -1,6 +1,6 @@
 # Field / Column Security Profile Manager
 
-[![Build](https://github.com/cathalnoonan/d365-pcf-securityprofilemanager/actions/workflows/BUILD.yml/badge.svg)](https://github.com/cathalnoonan/d365-pcf-securityprofilemanager/actions/workflows/BUILD.yml)
+[![Build](https://github.com/cathalnoonan/d365-pcf-securityprofilemanager/actions/workflows/build.yml/badge.svg)](https://github.com/cathalnoonan/d365-pcf-securityprofilemanager/actions/workflows/build.yml)
 [![Github All Releases](https://img.shields.io/github/downloads/cathalnoonan/d365-pcf-securityprofilemanager/total.svg)]()
 
 A PCF control to add or remove field security profiles for a user or team.
